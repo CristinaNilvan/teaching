@@ -33,6 +33,6 @@ void assertions () {
 int main(int argc, char const *argv[]) {
 
   assertions ();
-  
+
   return 0;
 }
