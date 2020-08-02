@@ -1,5 +1,5 @@
 /*
-  INFO: Simple clean code example in C++ without TDD or any exception handler.
+  INFO: Simple clean code example in C++ without TDD or any exception handler. (In a recursive way which I consider the best)
   SCOPE: Learning process.
 */
 
@@ -7,18 +7,26 @@
 
 int getFibonacciNumber (int positionOfNumber) {
 
+  int result;
+
   if (positionOfNumber == 1) return 1;
   if (positionOfNumber == 2) return 1;
 
-  return getFibonacciNumber(positionOfNumber - 1) + getFibonacciNumber(positionOfNumber - 2);
+  result = getFibonacciNumber(positionOfNumber - 1) + getFibonacciNumber(positionOfNumber - 2);
+
+  return result;
 }
 
 int getFactorialNumber (int positionOfNumber) {
 
+  int result;
+
   if (positionOfNumber == 0) return 1;
   if (positionOfNumber == 1) return 1;
 
-  return positionOfNumber * getFactorialNumber(positionOfNumber - 1);
+  result = positionOfNumber * getFactorialNumber(positionOfNumber - 1);
+
+  return result;
 }
 
 void assertions () {
