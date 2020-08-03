@@ -1,15 +1,4 @@
-#include <iostream>
-
-class numberProperties {
-
-public:
-  numberProperties () {}
-
-  int getFibonacciNumber (int positionOfNumber);
-  int getFactorialNumber (int positionOfNumber);
-
-  virtual ~numberProperties () {}
-};
+#include "clean_code_oop_def_sample_recursively.hpp"
 
 int numberProperties::getFibonacciNumber (int positionOfNumber) {
 
@@ -24,7 +13,7 @@ int numberProperties::getFibonacciNumber (int positionOfNumber) {
 }
 
 int numberProperties::getFactorialNumber (int positionOfNumber) {
-  
+
   int result;
 
   if (positionOfNumber == 0) return 1;
@@ -34,17 +23,6 @@ int numberProperties::getFactorialNumber (int positionOfNumber) {
 
   return result;
 }
-
-class TestCases {
-
-public:
-  TestCases () {}
-
-  void assertFibonacci (numberProperties properties);
-  void assertFactorial (numberProperties properties);
-
-  virtual ~TestCases () {}
-};
 
 void TestCases::assertFibonacci (numberProperties properties) {
 
