@@ -1,7 +1,7 @@
 class number_properties():
     """docstring for number_properties."""
 
-    def get_fibonacci_number(position_of_number):
+    def get_fibonacci_number(self, position_of_number):
 
         position_of_number += 1
 
@@ -20,7 +20,7 @@ class number_properties():
         return final_value
 
 
-    def get_factorial_number(position_of_number):
+    def get_factorial_number(self, position_of_number):
 
         position_of_number += 1
         result = 1
@@ -34,17 +34,17 @@ class number_properties():
 class test_cases():
     """docstring for test_cases."""
 
-    def assert_fibonacci(properties):
-        if properties.get_fibonacci_number(7) == 13:
+    def assert_fibonacci(self, properties):
+        if properties.get_fibonacci_number(properties, 7) == 13:
             print("Fibonacci test passed")
 
 
-    def assert_factorial(properties):
-        if properties.get_factorial_number(3) == 6:
+    def assert_factorial(self, properties):
+        if properties.get_factorial_number(properties, 3) == 6:
             print("Factorial test passed")
 
 properties = number_properties
 cases = test_cases
 
-cases.assert_fibonacci(properties)
-cases.assert_factorial(properties)
+cases.assert_fibonacci(cases, properties)
+cases.assert_factorial(cases, properties)
