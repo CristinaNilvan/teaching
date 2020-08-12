@@ -1,9 +1,4 @@
-/*
-  INFO: Simple clean code example in C++ without TDD or any exception handler. (In a recursive way which I consider the best)
-  SCOPE: Learning process.
-*/
-
-#include <iostream>
+#include "clean_code_def_good_sample_recursively.hpp"
 
 int getFibonacciNumber (int positionOfNumber) {
 
@@ -29,18 +24,17 @@ int getFactorialNumber (int positionOfNumber) {
   return result;
 }
 
-void assertions () {
-
-  if (getFibonacciNumber(7) == 13)
-    std::cout << "Fibonacci test passed;\n";
-
-  if (getFactorialNumber(3) == 6)
-    std::cout << "Factorial test passed;\n";
-}
-
 int main(int argc, char const *argv[]) {
 
-  assertions ();
+  auto start = high_resolution_clock::now();
+
+  getFibonacciNumber(40);
+  
+  auto stop = high_resolution_clock::now();
+
+  auto duration = duration_cast<milliseconds>(stop - start);
+
+  std::cout << "Time taken by tasks: " << duration.count() << " milliseconds" << '\n';
 
   return 0;
 }
