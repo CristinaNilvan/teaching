@@ -30,7 +30,22 @@ class Square(Shapes):
         return result
 
 
-square = Square(5)
+class TestFunctionalities:
 
-print(square.get_area())
-print(square.get_perimeter())
+    def __init__(self):
+        super(TestFunctionalities, self).__init__()
+
+    def test_get_area (self, square):
+
+        if square.get_area() == 25:
+            print("Test Passed")
+        else:
+            print("Test Failed")
+
+    def test_get_perimeter(self, square):
+
+        if square.get_perimeter() == 20:
+            print("Test Passed")
+        else:
+            print("Test Failed")
+
