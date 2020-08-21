@@ -13,7 +13,7 @@ public:
 class Square : public Shapes {
 
 private:
-    int length;
+  int length;
 
 public:
 
@@ -24,7 +24,7 @@ public:
 };
 
 Square::Square (int length) {
-    
+
     this->length = length;
 }
 
@@ -38,7 +38,7 @@ int Square::GetAreaOfShape () {
 }
 
 int Square::GetPerimeterOfShape () {
-    
+
     int result;
 
     result = this->length * 4;
@@ -46,33 +46,89 @@ int Square::GetPerimeterOfShape () {
     return result;
 }
 
+class Triangle : public Shapes {
+
+private:
+ int length;
+ int width;
+
+public:
+  Triangle (int length, int width);
+
+  int GetAreaOfShape ();
+  int GetPerimeterOfShape ();
+};
+
+Triangle::Triangle (int length, int width) {
+
+  this->length = length;
+  this->width = width;
+}
+
+int Triangle::GetAreaOfShape () {
+
+  int result = this->length * this->width;
+
+  return result;
+}
+
+int Triangle::GetPerimeterOfShape () {
+
+  int result = 2 * this->length + 2 * this->width;
+
+  return result;
+}
+
 class TestingFunctionalities {
 
 public:
     TestingFunctionalities() {}
 
-    void TestGetAreaOfShape (Square square);
-    void TestGetPerimeterOfShape (Square square);
+    void TestGetAreaOfSquare (Square square);
+    void TestGetPerimeterOfSquare (Square square);
+
+    void TestGetAreaOfTriangle(Triangle triangle);
+    void TestGetPerimeterOfTriangle (Triangle triangle);
 
     ~TestingFunctionalities() {}
 };
 
-void TestingFunctionalities::TestGetAreaOfShape (Square square) {
+void TestingFunctionalities::TestGetAreaOfSquare (Square square) {
 
     if (square.GetAreaOfShape() == 25)
 
         std::cout << "Test passed\n";
     else
-    
+
         std::cout << "Test failed\n";
 }
 
-void TestingFunctionalities::TestGetPerimeterOfShape (Square square) {
-    
+void TestingFunctionalities::TestGetPerimeterOfSquare (Square square) {
+
     if (square.GetPerimeterOfShape() == 20)
 
         std::cout << "Test passed\n";
     else
-    
+
         std::cout << "Test failed\n";
+}
+
+void TestingFunctionalities::TestGetAreaOfTriangle(Triangle triangle) {
+
+  if (triangle.GetAreaOfShape() == 12)
+
+    std::cout << "Test passed\n";
+  else
+
+    std::cout << "Test failed\n";
+}
+
+void TestingFunctionalities::TestGetPerimeterOfTriangle (Triangle triangle) {
+
+  if (triangle.GetPerimeterOfShape() == 14)
+
+    std::cout << "Test passed\n";
+  else
+
+    std::cout << "Test failed\n";
 }
