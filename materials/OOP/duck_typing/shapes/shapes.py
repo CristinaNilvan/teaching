@@ -1,4 +1,4 @@
-class Square():
+class Square:
 
     def __init__(self, length):
         super(Square, self).__init__()
