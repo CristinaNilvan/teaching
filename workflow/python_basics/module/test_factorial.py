@@ -4,7 +4,7 @@ class test:
 
     def __init__(self):
         pass
-
+        
     def assert_factorial_number(self, object):
 
         if object.get_factorial_number() == 6:
