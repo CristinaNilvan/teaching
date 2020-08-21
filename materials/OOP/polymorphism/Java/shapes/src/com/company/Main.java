@@ -6,8 +6,12 @@ public class Main {
 
         TestFunctionalities tests = new TestFunctionalities();
         Square square = new Square(5);
+        Triangle triangle = new Triangle(3, 4);
 
-        tests.TestGetAreaOfShape(square);
-        tests.TestGetPerimeterOfShape(square);
+        tests.TestGetAreaOfSquare(square);
+        tests.TestGetPerimeterOfSquare(square);
+
+        tests.TestGetAreaOfTriangle(triangle);
+        tests.TestGetPerimeterOfTriangle (triangle);
     }
 }

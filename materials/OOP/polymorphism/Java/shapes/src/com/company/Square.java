@@ -9,6 +9,7 @@ class Square implements Shapes {
         this.length = length;
     }
 
+    @Override
     public int GetAreaOfShape () {
 
         int result;
@@ -18,6 +19,7 @@ class Square implements Shapes {
         return result;
     }
 
+    @Override
     public int GetPerimeterOfShape () {
 
         int result;
